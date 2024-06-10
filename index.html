@@ -18,13 +18,21 @@
 
     <!-- Import CSS: Main Stylesheet -->
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- Import CSS: myAdded Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/myAdded.css">
+    <!-- Import Google Font: Nabla -->
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
   </head>
-
+  <!-- Colour pallete
+  dark : #222831
+  grey : #393E46
+  blue : #00ADB5
+  white : #EEEEEE -->
   <body>
     <div id="particles-js">
       <div class="header">
         <h1>
-          <span class="site-title">ADITYA SHARMA</span>
+          <span class="site-title">👋 Hi, ADITYA SHARMA</span>
           <span class="site-description">Programmer - Web Developer</span>
         </h1>
         <div class="header-icons">
@@ -44,13 +52,17 @@
         <div class="header-links">
           <a class="link" href="#about" data-scroll>About Me</a>
           <a class="link" href="#projects" data-scroll>Projects</a>
+          <a class="link" href="#contact" data-scroll>Contact me</a>
         </div>
       </div>
       <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
     </div>
+    
+    <!-- Sticky Section Header -->
+    <div id="section-header"></div>
+
     <!-- About Section -->
     <section id="about">
-      <!-- User Introduction-->
       <div class="user-details">
         <h1>My Story</h1>
         <picture>
@@ -68,10 +80,77 @@
           Engineering, Data Science, and Machine Learning, and I am open to opportunities for the same.
         </p>
       </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+      <div>
+        <h1 class="nabla-heading">My Projects</h1>
+        <p>
+          I love to create things, and I'm always working on something new! You can view some of my favorite projects below.
+        </p>
+        
+        <!-- Project 1 -->
+        <div class="project-tile">
+          <div class="project-photo">
+            <img src="./assets/img/project1.jpg" alt="Project 1 Photo" />
+          </div>
+          <div class="project-details">
+            <h2>MeMs - A Custom Memory Allocater and Management System</h2>
+            <p>A brief description of the project goes here.</p>
+            <div class="project-tech">
+              <ul>
+                <li>C</li>
+                <li>Memory Management</li>
+                <li>Systems Programming</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-tile">
+          <div class="project-details">
+            <h2>Project Two Title</h2>
+            <p>A brief description of the project goes here.</p>
+            <div class="project-tech">
+              <ul>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-photo">
+            <img src="./assets/img/project2.jpg" alt="Project 2 Photo" />
+          </div>
+        </div>
 
-    <footer class="footer">
-      <p>&copy; Aditya Sharma, 2020 </p>
-    </footer>
+        <!-- Add more projects as needed -->
+      </div>
+    </section>
+
+    <!-- Get in Touch Section -->
+    <section id="contact">
+      <div>
+        <h1>Contact Me</h1>
+        <form id="contact-form" action="your-backend-script" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
 
     <!-- Import JS: Particles Theme -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -79,5 +158,11 @@
     <script src="./assets/js/main.js"></script>
     <!-- Import JS: Sweet Scroll -->
     <script src="./assets/js/sweet-scroll.min.js"></script>
+    <!-- Import JS: Section Header Script -->
+    <script src="./assets/js/section-header.js"></script>
+
+    <footer class="footer">
+      <p>&copy; Aditya Sharma, 2020 </p>
+    </footer>
   </body>
 </html>

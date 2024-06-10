@@ -4796,11 +4796,6 @@ strong {
     color: #4b5664
 }
 
-#about {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 960px
-}
 
 .tech {
     margin: 10px
@@ -4821,27 +4816,4 @@ strong {
 .user-details {
     text-align: center;
     margin: 5px auto
-}
-
-.footer {
-    background: #1488CC;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2B32B2, #1488CC);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 10px 0;
-    margin-top: 100px;
-    text-align: center;
-    color: #fff
-}
-
-.footer .love {
-    color: red
-}
-
-.footer a {
-    text-decoration: none;
-    margin: 0;
-    color: #fff
 }
