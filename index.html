@@ -19,9 +19,12 @@
     <!-- Import CSS: Main Stylesheet -->
     <link rel="stylesheet" href="./assets/css/main.css" />
     <!-- Import CSS: myAdded Stylesheet -->
-    <link rel="stylesheet" href="/assets/css/myAdded.css">
+    <link rel="stylesheet" href="/assets/css/myAdded.css" />
     <!-- Import Google Font: Nabla -->
-    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <!-- Colour pallete
   dark : #222831
@@ -32,20 +35,31 @@
     <div id="particles-js">
       <div class="header">
         <h1>
-          <span class="site-title">👋 Hi, ADITYA SHARMA</span>
+          <span class="site-title">👋 Hi, I'am ADITYA SHARMA</span>
           <span class="site-description">Programmer - Web Developer</span>
         </h1>
         <div class="header-icons">
-          <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/aditya-sharma-04360125a/">
+          <a
+            aria-label="My LinkedIn Profile"
+            target="_blank"
+            href="https://www.linkedin.com/in/aditya-sharma-04360125a/"
+          >
             <i class="icon fa fa-linkedin" aria-hidden="true"></i>
           </a>
-          <a aria-label="My Github Profile" target="_blank" href="https://github.com/adsh16">
+          <a
+            aria-label="My Github Profile"
+            target="_blank"
+            href="https://github.com/adsh16"
+          >
             <i class="icon fa fa-github-alt" aria-hidden="true"></i>
           </a>
           <a aria-label="My Résumé" target="_blank" href="resume.html">
             <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
           </a>
-          <a aria-label="Send Email" href="mailto:aditya22038@iiitd.ac.in" target="_blank"
+          <a
+            aria-label="Send Email"
+            href="mailto:aditya22038@iiitd.ac.in"
+            target="_blank"
             ><i class="icon fa fa-envelope"></i
           ></a>
         </div>
@@ -55,45 +69,46 @@
           <a class="link" href="#contact" data-scroll>Contact me</a>
         </div>
       </div>
-      <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+      <a class="down" href="#about" data-scroll>
+        <i class="icon fa fa-chevron-down" aria-hidden="true"></i
+      ></a>
     </div>
-    
+
     <!-- Sticky Section Header -->
     <div id="section-header"></div>
-
     <!-- About Section -->
-    <section id="about">
-      <div class="user-details">
-        <h1>My Story</h1>
-        <picture>
-          <img
-            src="./assets/img/adi_red_background.png"
-            alt="Professional Me"
-            width="25%"
-            style="border: 1px; border-radius: 50%"
-          />
-        </picture>
-        <p style="font-size: larger; font-style: bold;">
-          I am in 2nd year in Indraprastha Institute of Information Technology Delhi
-          pursuing an undergraduate degree. I am majoring in Computer Science. I'm an aspiring Software Developer.
-          I am interested in exploring the fields of Software
-          Engineering, Data Science, and Machine Learning, and I am open to opportunities for the same.
+    <section id="about" style="display: flex;justify-content: space-between;">
+      <div class="user-details" style="justify-content: flex-start;">
+        <h1 style="text-align: left;margin-top:0px;">About me</h1>
+        <p style="text-align: left;">
+          I am in 2nd year in Indraprastha Institute of Information Technology
+          Delhi pursuing an undergraduate degree. I am majoring in Computer
+          Science. I'm an aspiring Software Developer. I am interested in
+          exploring the fields of Software Engineering, Data Science, and
+          Machine Learning, and I am open to opportunities for the same.
         </p>
       </div>
+      <div style="margin-left: 30px;">
+        <img
+          src="./assets/img/adi_red_background.png"
+          alt="Professional Me"
+          style="border-radius: 50%"
+        />
+      </div>
     </section>
-    
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" style="display: flex;flex-direction: row;">
       <div>
         <h1 class="nabla-heading">My Projects</h1>
         <p>
-          I love to create things, and I'm always working on something new! You can view some of my favorite projects below.
+          I love to create things, and I'm always working on something new! You
+          can view some of my favorite projects below.
         </p>
-        
+
         <!-- Project 1 -->
         <div class="project-tile">
           <div class="project-photo">
-            <img src="./assets/img/project1.jpg" alt="Project 1 Photo" />
+            <img src="./assets/img/projects/mems.png" alt="Project 1 Photo" />
           </div>
           <div class="project-details">
             <h2>MeMs - A Custom Memory Allocater and Management System</h2>
@@ -105,14 +120,22 @@
                 <li>Systems Programming</li>
               </ul>
             </div>
+            <div class="github-link" style="display: flex;">
+              <a href="https://github.com/">
+                <i class="fa fa-github" style="font-size:48px"></i>
+              </a>
+            </div>
           </div>
         </div>
-        
+
         <!-- Project 2 -->
         <div class="project-tile">
           <div class="project-details">
-            <h2>Project Two Title</h2>
-            <p>A brief description of the project goes here.</p>
+            <h2>cfStats</h2>
+            <p>
+              A chromium extension that enables user to see different statistics
+              on their Codeforces profile
+            </p>
             <div class="project-tech">
               <ul>
                 <li>JavaScript</li>
@@ -120,13 +143,77 @@
                 <li>Node.js</li>
               </ul>
             </div>
+            <div class="github-link" style="display: flex;">
+              <a href="https://github.com/">
+                <i class="fa fa-github" style="font-size:48px"></i>
+              </a>
+            </div>
           </div>
           <div class="project-photo">
-            <img src="./assets/img/project2.jpg" alt="Project 2 Photo" />
+            <img
+              src="./assets/img/projects/cfStats.png"
+              alt="Project 2 Photo"
+            />
           </div>
         </div>
 
         <!-- Add more projects as needed -->
+        <!-- Project 2 -->
+        <div class="project-tile">
+          <div class="project-details">
+            <h2>cfStats</h2>
+            <p>
+              A chromium extension that enables user to see different statistics
+              on their Codeforces profile
+            </p>
+            <div class="project-tech">
+              <ul>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+              </ul>
+            </div>
+            <div class="github-link" style="display: flex;">
+              <a href="https://github.com/">
+                <i class="fa fa-github" style="font-size:48px"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-photo">
+            <img
+              src="./assets/img/projects/cfStats.png"
+              alt="Project 2 Photo"
+            />
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-tile">
+          <div class="project-details">
+            <h2>cfStats</h2>
+            <p>
+              A chromium extension that enables user to see different statistics
+              on their Codeforces profile
+            </p>
+            <div class="project-tech">
+              <ul>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+              </ul>
+            </div>
+            <div class="github-link" style="display: flex;">
+              <a href="https://github.com/">
+                <i class="fa fa-github" style="font-size:48px"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-photo">
+            <img
+              src="./assets/img/projects/cfStats.png"
+              alt="Project 2 Photo"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -134,14 +221,15 @@
     <section id="contact">
       <div>
         <h1>Contact Me</h1>
+        <p>My inbox is always open. I'll try my best to get back to you as soon as possible!</p>
         <form id="contact-form" action="your-backend-script" method="post">
           <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required />
           </div>
           <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required />
           </div>
           <div class="form-group">
             <label for="message">Message:</label>
@@ -162,7 +250,7 @@
     <script src="./assets/js/section-header.js"></script>
 
     <footer class="footer">
-      <p>&copy; Aditya Sharma, 2020 </p>
+      <p>&copy; Aditya Sharma, 2020</p>
     </footer>
   </body>
 </html>

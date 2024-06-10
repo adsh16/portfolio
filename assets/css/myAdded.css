@@ -1,90 +1,131 @@
+
 /* Colour palette */
 :root {
-    --dark: #222831;
-    --grey: #393E46;
-    --blue : #234FBB; 
-    --lightblue: #00ADB5;
-    --white: #EEEEEE;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  
-  section {
-    padding: 20px;
-    margin: 20px 0;
-  }
-  
-  /* Sticky Header Styling */
-  #section-header {
-    position: sticky;
-    top: 0;
-    background-color: var(--blue); /* White background */
-    border-bottom: 2px solid var(--blue); /* Blue border */
-    padding: 10px;
-    text-align: center;
-    color: var(--dark);
-    font-size: 24px;
-    font-weight: bold;
-    z-index: 1000;
-  }
-  
-  /* Project Tiles Styling */
-  .project-tile {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 3px solid var(--blue); /* Blue border */
-    border-radius: 4px;
-    padding: 10px;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-  
-  .project-tile:hover {
-    border-color: var(--lightblue); /* Blue border on hover */
-    box-shadow: 0 0 15px var(--blue); /* Blue shadow on hover */
-  }
-  
-  /* Alternate the flex direction for every second project */
-  .project-tile:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-  
-  /* Project photo and details styling */
-  .project-photo,
-  .project-details {
-    flex: 1;
-    min-width: 300px;
-    padding: 10px;
-  }
-  
-  .project-photo img {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-  
-  /* Project Technologies Styling */
-  .project-tech ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .project-tech li {
-    background-color: var(--blue); /* Blue background */
-    color: var(--white); /* White text */
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 14px;
-  }
-  
+  --dark: #222831;
+  --grey: #393E46;
+  --blue : #234FBB; 
+  --lightblue: #00ADB5;
+  --white: #EEEEEE;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* body { 
+  transform-origin: top left; 
+}  */
+
+p {
+  font-size: larger;
+}
+
+section {
+  padding: 10px;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+
+.project-photo {
+  margin: 1em;
+  padding: 12px;
+}
+
+.project-photo img {
+  border-radius: 8px;
+  opacity: 0.8;
+  transition: opacity 0.8s ease,
+}
+
+.project-photo img:hover {
+  opacity: 1;
+}
+
+/* Sticky Header Styling */
+#section-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--blue); /* White background */
+  border-bottom: 4px solid var(--lightblue); /* Blue border */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 10px;
+  text-align: center;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+/* Project Tiles Styling */
+.project-tile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 3px solid var(--blue); /* Blue border */
+  border-radius: 4px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-tile:hover {
+  border-color: var(--lightblue); /* Blue border on hover */
+  box-shadow: 0 0 15px var(--blue); /* Blue shadow on hover */
+}
+
+
+/* Project photo and details styling */
+.project-photo,
+.project-details {
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+}
+
+.project-photo img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Project Technologies Styling */
+.project-tech ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-tech li {
+  background-color: var(--blue); /* Blue background */
+  color: var(--white); /* White text */
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: box-shadow 0.1s ease; /* Transition for box-shadow */
+}
+
+
+.github-link a{
+  color: var(--dark);
+  transition: color 0.5sec ease;
+}
+
+.github-link:hover a{
+  color: red;
+}
+
+.project-tech li:hover {
+  box-shadow: 0 0 3px var(--lightblue); /* Glow effect on hover */
+}
+
+/* --------------------------------------------------------------
+ */
 /* Contact Form Styling */
 #contact-form {
   max-width: 600px;
@@ -124,16 +165,10 @@ button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-
-
-
 .footer {
   background: #1488CC;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #2B32B2, #1488CC);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 10px 0;
   margin-top: 100px;
   text-align: center;
@@ -148,4 +183,16 @@ button[type="submit"]:hover {
   text-decoration: none;
   margin: 0;
   color: #fff
+}
+
+#about {
+  display: flexbox;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+h1{
+  color: var(--dark);
+  font-family:'Courier New', Courier, monospace;
+  font-size:xx-large;
 }

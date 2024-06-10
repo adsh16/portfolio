@@ -8,31 +8,26 @@ html {
     -webkit-text-size-adjust: 100%
 }
 
-body {
+/* body {
     margin: 0;
     padding: 0;
     font-size: 100%;
     line-height: 1.5;
     color: #555;
     font-family: 'Nunito Sans', sans-serif
-}
+} */
 
-details,
-footer,
-header,
-section {
-    display: block
-}
 
-h1 {
+
+/* h1 {
     margin: .67em 0;
     font-size: 2.5rem;
-}
+} */
 
-a {
+/* a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects
-}
+} */
 
 [type=checkbox],
 [type=radio],
@@ -4624,27 +4619,6 @@ template {
     color: #68b604
 }
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-nav,
-section {
-    display: block
-}
-
-h1,
-h2,
-h3,
-h4,
-strong {
-    margin-top: 1em;
-    padding-top: 1em;
-    line-height: 1.25;
-    color: #333
-}
 
 #particles-js {
     background: #cc3914;
@@ -4797,6 +4771,7 @@ strong {
 }
 
 
+
 .tech {
     margin: 10px
 }
@@ -4810,10 +4785,31 @@ strong {
     justify-content: space-between;
 }
 
-.user p {
-    font-size: 16px
-}
+
 .user-details {
     text-align: center;
     margin: 5px auto
+}
+
+.footer {
+    background: #1488CC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2B32B2, #1488CC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 10px 0;
+    margin-top: 100px;
+    text-align: center;
+    color: #fff
+}
+
+.footer .love {
+    color: red
+}
+
+.footer a {
+    text-decoration: none;
+    margin: 0;
+    color: #fff
 }
