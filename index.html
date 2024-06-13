@@ -79,9 +79,11 @@
     <div id="section-header"></div>
     <!-- About Section -->
 
-    <div class="Section" id="about">
-      <div style="flex: 0.5;">
-        <h1 class="heading">About me</h1>
+    <div id="about" class="Section" >
+      <div>
+        <div class="heading-div">
+          <h1 class="heading">About me</h1>
+        </div>
         <div class="section-description">
           <p>
             I am in 2nd year in Indraprastha Institute of Information Technology
@@ -98,7 +100,9 @@
     </div>
     <!-- Projects Section -->
     <div id="projects" class="Section">
-      <h1 class="heading">My Projects</h1>
+      <div class="heading-div">
+        <h1 class="heading">My Projects</h1>
+      </div>
       <p class="section-description">
         I love to create things, and I'm always working on something new! You
         can view some of my favorite projects below.
@@ -110,8 +114,8 @@
             <img src="./assets/img/projects/mems.png" alt="Project 1 Photo" />
           </div>
           <div class="project-details">
-            <h2>MeMs - A Custom Memory Allocater and Management System</h2>
-            <p>A brief description of the project goes here.</p>
+            <h2>MeMs</h2>
+            <p>A Custom Memory Allocater and Management System</p>
             <div class="project-tech">
               <ul>
                 <li>C</li>
@@ -119,7 +123,7 @@
                 <li>Systems Programming</li>
               </ul>
             </div>
-            <div class="github-link" style="display: flex">
+            <div class="github-link">
               <a href="https://github.com/">
                 <i class="fa fa-github" style="font-size: 48px"></i>
               </a>
@@ -212,15 +216,16 @@
         </div>
       </div>
     </div>
-
     <!-- Get in Touch Section -->
     <div id="contact" class="Section">
-      <h1 class="heading">Contact Me</h1>
+      <div class="heading-div">
+        <h1 class="heading">Contact Me</h1>
+      </div>
       <p class="section-description">
         My inbox is always open. I'll try my best to get back to you as soon as
         possible!
       </p>
-      <div>
+      <div style="text-align: left;">
         <form id="contact-form" action="your-backend-script" method="post">
           <div class="form-group">
             <label for="name">Name:</label>

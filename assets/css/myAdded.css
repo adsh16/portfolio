@@ -7,6 +7,15 @@
   --white: #EEEEEE;
 }
 
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter.ttc);
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular-400';
+  src: url();
+}
 
 /* Section styling */
 .Section {
@@ -16,24 +25,35 @@
 
 .section-description{
   font-size: 1.75rem;
+  font-family: 'Inter';
 }
 
 .heading{
   font-size: 4rem;
+  font-family:'Montserrat-Regular-400';
+  color: var(--dark);
 }
+
+
 
 #about{
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
-@media (max-width: 800px) {
+@media(min-width:1000px){
+  #about-photo{
+    min-width: 350px;
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 1000px) {
   #about {
     flex-direction: column;
   }
 }
-
 
 /* Projects Section */
 #projects-container{
@@ -42,12 +62,21 @@
   flex-wrap: wrap;
 }
 
+@media (max-width : 880px) {
+  #projects-container{
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+}
+
 /* ----------------------------------------------------------------------------------------------- */
 /* Project  Styling */
 /* ----------------------------------------------------------------------------------------------- */
 .project-photo {
   margin: 0;
   padding: 12px;
+  width: 376px;
+  height: 235px;
 }
 
 .project-photo img {
@@ -62,9 +91,10 @@
 
 .project-tile {
   display: flex;
+  min-width: 300px;
   flex-direction: column;
   align-items: center;
-  max-width: 300px; /* Adjust the max-width as needed */
+  max-width: 400px; /* Adjust the max-width as needed */
   margin: 10px;
   border: 3px solid var(--blue); /* Blue border */
   border-radius: 4px;
@@ -79,6 +109,17 @@
 
 .project-details {
   padding: 10px;
+}
+
+.project-details h2{
+  font-size: 2rem;
+}
+.project-details p{
+  font-size: 1.2rem;
+}
+
+.github-link{
+  align-items: flex-end;
 }
 
 img {
@@ -103,7 +144,7 @@ img {
   color: var(--white); /* White text */
   padding: 5px 10px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 1.1rem;
   transition: box-shadow 0.1s ease; /* Transition for box-shadow */
 }
 
@@ -140,8 +181,9 @@ img {
 /* Contact Form Styling */
 /* ----------------------------------------------------------------------------------------------- */
 #contact-form {
+  margin-left: 10px;
   max-width: 600px;
-  margin: 0 auto;
+  min-width: 200px;
 }
 
 .form-group {
@@ -151,13 +193,15 @@ img {
 .form-group label {
   display: block;
   margin-bottom: 5px;
+  font-family: 'Inter';
+  font-size: 1.2rem;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
 }
@@ -174,7 +218,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #004c9e;
 }
 
 /* Footer */
