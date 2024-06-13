@@ -25,13 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <!-- Colour pallete
-  dark : #222831
-  grey : #393E46
-  blue : #00ADB5
-  white : #EEEEEE -->
-  <body>
+    <link href="./assets/css/normalize.css" rel="stylesheet" />
     <div id="particles-js">
       <div class="header">
         <h1>
@@ -73,38 +67,43 @@
         <i class="icon fa fa-chevron-down" aria-hidden="true"></i
       ></a>
     </div>
+  </head>
+  <!-- Colour pallete
+  dark : #222831
+  grey : #393E46
+  blue : #00ADB5
+  white : #EEEEEE -->
 
+  <body>
     <!-- Sticky Section Header -->
     <div id="section-header"></div>
     <!-- About Section -->
-    <section id="about" style="display: flex;justify-content: space-between;">
-      <div class="user-details" style="justify-content: flex-start;">
-        <h1 style="text-align: left;margin-top:0px;">About me</h1>
-        <p style="text-align: left;">
-          I am in 2nd year in Indraprastha Institute of Information Technology
-          Delhi pursuing an undergraduate degree. I am majoring in Computer
-          Science. I'm an aspiring Software Developer. I am interested in
-          exploring the fields of Software Engineering, Data Science, and
-          Machine Learning, and I am open to opportunities for the same.
-        </p>
-      </div>
-      <div style="margin-left: 30px;">
-        <img
-          src="./assets/img/adi_red_background.png"
-          alt="Professional Me"
-          style="border-radius: 50%"
-        />
-      </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects" style="display: flex;flex-direction: row;">
-      <div>
-        <h1 class="nabla-heading">My Projects</h1>
-        <p>
-          I love to create things, and I'm always working on something new! You
-          can view some of my favorite projects below.
-        </p>
 
+    <div class="Section" id="about">
+      <div style="flex: 0.5;">
+        <h1 class="heading">About me</h1>
+        <div class="section-description">
+          <p>
+            I am in 2nd year in Indraprastha Institute of Information Technology
+            Delhi pursuing an undergraduate degree. I am majoring in Computer
+            Science. I'm an aspiring Software Developer. I am interested in
+            exploring the fields of Software Engineering, Data Science, and
+            Machine Learning, and I am open to opportunities for the same.
+          </p>
+        </div>
+      </div>
+      <div id="about-photo">
+        <img src="./assets/img/profile_pic.png" alt="me">
+      </div>
+    </div>
+    <!-- Projects Section -->
+    <div id="projects" class="Section">
+      <h1 class="heading">My Projects</h1>
+      <p class="section-description">
+        I love to create things, and I'm always working on something new! You
+        can view some of my favorite projects below.
+      </p>
+      <div id="projects-container">
         <!-- Project 1 -->
         <div class="project-tile">
           <div class="project-photo">
@@ -120,16 +119,21 @@
                 <li>Systems Programming</li>
               </ul>
             </div>
-            <div class="github-link" style="display: flex;">
+            <div class="github-link" style="display: flex">
               <a href="https://github.com/">
-                <i class="fa fa-github" style="font-size:48px"></i>
+                <i class="fa fa-github" style="font-size: 48px"></i>
               </a>
             </div>
           </div>
         </div>
-
         <!-- Project 2 -->
         <div class="project-tile">
+          <div class="project-photo">
+            <img
+              src="./assets/img/projects/cfStats.png"
+              alt="Project 2 Photo"
+            />
+          </div>
           <div class="project-details">
             <h2>cfStats</h2>
             <p>
@@ -143,23 +147,21 @@
                 <li>Node.js</li>
               </ul>
             </div>
-            <div class="github-link" style="display: flex;">
+            <div class="github-link" style="display: flex">
               <a href="https://github.com/">
-                <i class="fa fa-github" style="font-size:48px"></i>
+                <i class="fa fa-github" style="font-size: 48px"></i>
               </a>
             </div>
           </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-tile">
           <div class="project-photo">
             <img
               src="./assets/img/projects/cfStats.png"
               alt="Project 2 Photo"
             />
           </div>
-        </div>
-
-        <!-- Add more projects as needed -->
-        <!-- Project 2 -->
-        <div class="project-tile">
           <div class="project-details">
             <h2>cfStats</h2>
             <p>
@@ -173,21 +175,21 @@
                 <li>Node.js</li>
               </ul>
             </div>
-            <div class="github-link" style="display: flex;">
+            <div class="github-link" style="display: flex">
               <a href="https://github.com/">
-                <i class="fa fa-github" style="font-size:48px"></i>
+                <i class="fa fa-github" style="font-size: 48px"></i>
               </a>
             </div>
           </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-tile">
           <div class="project-photo">
             <img
               src="./assets/img/projects/cfStats.png"
               alt="Project 2 Photo"
             />
           </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="project-tile">
           <div class="project-details">
             <h2>cfStats</h2>
             <p>
@@ -201,27 +203,24 @@
                 <li>Node.js</li>
               </ul>
             </div>
-            <div class="github-link" style="display: flex;">
+            <div class="github-link" style="display: flex">
               <a href="https://github.com/">
-                <i class="fa fa-github" style="font-size:48px"></i>
+                <i class="fa fa-github" style="font-size: 48px"></i>
               </a>
             </div>
-          </div>
-          <div class="project-photo">
-            <img
-              src="./assets/img/projects/cfStats.png"
-              alt="Project 2 Photo"
-            />
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Get in Touch Section -->
-    <section id="contact">
+    <div id="contact" class="Section">
+      <h1 class="heading">Contact Me</h1>
+      <p class="section-description">
+        My inbox is always open. I'll try my best to get back to you as soon as
+        possible!
+      </p>
       <div>
-        <h1>Contact Me</h1>
-        <p>My inbox is always open. I'll try my best to get back to you as soon as possible!</p>
         <form id="contact-form" action="your-backend-script" method="post">
           <div class="form-group">
             <label for="name">Name:</label>
@@ -238,7 +237,7 @@
           <button type="submit">Send Message</button>
         </form>
       </div>
-    </section>
+    </div>
 
     <!-- Import JS: Particles Theme -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
