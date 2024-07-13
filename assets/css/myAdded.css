@@ -59,6 +59,45 @@
 }
 
 
+/* ----------------------------------------------------------------------------------------------- */
+/* skills  Styling */
+/* ----------------------------------------------------------------------------------------------- */
+/* Glow of skills section */
+/* Add this CSS to your stylesheet */
+/* Container for the rows */
+.Section .section-description .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Column styling */
+.Section .section-description .column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* Ensure that lists in columns are styled properly */
+.Section .section-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Section .section-description li {
+  margin-bottom: 10px;
+}
+
+.Section .section-description i {
+  margin-right: 10px;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* skills  Styling */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+
+
 #about{
   display: flex;
   align-items: center;
