@@ -7,24 +7,20 @@
   --white: #EEEEEE;
 }
 /* --------------------------------------- */
-/* Adding Gradient */
-/* body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background: radial-gradient(circle at center, #00ADB5, #EEEEEE);
-  overflow: hidden;
+.radial-gradient {
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+  z-index : -1;
+  
+  /*Linear gradient... */
+  background: 
+    radial-gradient(
+     at center, #234FBB, #00ADB5
+    );
 }
-
-.gradient {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, #00ADB5, #EEEEEE);
-  transition: background 0.1s ease-out;
-} */
 /* --------------------------------------- */
 
 @font-face {
@@ -49,11 +45,18 @@
 }
 
 .heading{
-  font-size: 4rem;
+  font-size: 6rem;
   font-family:'Montserrat-Regular-400';
-  color: var(--dark);
+  opacity: 100;
 }
 
+
+/* ----------------------------------------------------------------------------------------------- */
+/* About Image tilting  Styling */
+/* ----------------------------------------------------------------------------------------------- */
+.tilt {
+  transition: transform 0.2s ease; /* Smooth transition */
+}
 
 
 #about{
@@ -73,6 +76,17 @@
   #about {
     flex-direction: column;
   }
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* Skills  Styling */
+/* ----------------------------------------------------------------------------------------------- */
+
+#skills ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }
 
 /* Projects Section */

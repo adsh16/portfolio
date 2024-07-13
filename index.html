@@ -21,6 +21,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Your other head content -->
     <!-- Import CSS: Main Stylesheet -->
     <link rel="stylesheet" href="./assets/css/main.css" />
@@ -82,10 +85,12 @@
   white : #EEEEEE -->
 
   <body>
+    <!-- Adding gradient background -->
+    <div class="radial-gradient"></div>
+
     <!-- Sticky Section Header -->
     <div id="section-header"></div>
     <!-- About Section -->
-
     <div id="about" class="Section">
       <div>
         <div class="heading-div">
@@ -102,10 +107,10 @@
         </div>
       </div>
       <div id="about-photo">
-        <img src="./assets/img/profile_pic.png" alt="me" />
+        <img class="tilt" src="./assets/img/profile_pic.png" alt="me" />
       </div>
     </div>
-
+    <!-- Skills Section -->
     <div id="skills" class="Section">
       <div class="heading-div">
         <h1 class="heading">Skills</h1>
@@ -178,7 +183,11 @@
         <!-- Project 1 -->
         <div class="project-tile">
           <div class="project-photo">
-            <img src="./assets/img/projects/mems.png" alt="Project 1 Photo" />
+            <img
+              class="tilt"
+              src="./assets/img/projects/mems.png"
+              alt="Project 1 Photo"
+            />
           </div>
           <div class="project-details">
             <h2>MeMs</h2>
@@ -201,6 +210,7 @@
         <div class="project-tile">
           <div class="project-photo">
             <img
+              class="tilt"
               src="./assets/img/projects/cfStats.png"
               alt="Project 2 Photo"
             />
@@ -229,6 +239,7 @@
         <div class="project-tile">
           <div class="project-photo">
             <img
+              class="tilt"
               src="./assets/img/projects/cfStats.png"
               alt="Project 2 Photo"
             />
@@ -257,6 +268,7 @@
         <div class="project-tile">
           <div class="project-photo">
             <img
+              class="tilt"
               src="./assets/img/projects/cfStats.png"
               alt="Project 2 Photo"
             />
@@ -293,13 +305,13 @@
         possible!
       </p>
       <div style="text-align: left">
-        <form id="contact-form" action="your-backend-script" method="post">
+        <form id="contact-form">
           <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
           </div>
           <div class="form-group">
-            <label for="email">Email:</label>
+            <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required />
           </div>
           <div class="form-group">
@@ -309,6 +321,7 @@
           <button type="submit">Send Message</button>
         </form>
       </div>
+      <div id="form-feedback" style="margin-top: 15px; font-size: 2rem;"></div>
     </div>
 
     <!-- Import JS: Particles Theme -->
@@ -319,17 +332,26 @@
     <script src="./assets/js/sweet-scroll.min.js"></script>
     <!-- Import JS: Section Header Script -->
     <script src="./assets/js/section-header.js"></script>
-
+    <!-- Import JS: Radiant Background script -->
+    <script src="./assets/js/radiant_background.js"></script>
+    <!-- Import JS:Image tilter script -->
+    <script src="./assets/js/image-tilter.js"></script>
+    <!-- Email js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "cRInRVJ89rJr9D19M",
+        });
+      })();
+    </script>
+    <!-- Import contactme js -->
+    <script src="./assets/js/contactme.js"></script>
     <footer class="footer">
       <p>&copy; Aditya Sharma, 2020</p>
     </footer>
-    <script>
-      document.addEventListener('mousemove', function(e) {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-        const gradient = document.querySelector('.gradient');
-        gradient.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, #00ADB5, #EEEEEE)`;
-      });
-    </script>
   </body>
 </html>

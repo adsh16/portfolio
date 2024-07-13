@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const sectionHeader = document.getElementById('section-header');
-  const sections = document.querySelectorAll('section');
+  const sections = document.querySelectorAll('.Section');
 
   function updateSectionHeader() {
       let currentSection = '';
