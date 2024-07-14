@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+
 /* Colour palette */
 :root {
   --dark: #222831;
   --grey: #393E46;
-  --blue: #234FBB;
+  --blue: rgb(35, 79, 187);
   --lightblue: #00ADB5;
   --white: #EEEEEE;
+  --red : rgb(185, 46, 52);
+  --orange : #ffa500;
 }
 /* --------------------------------------- */
 .radial-gradient {
@@ -44,10 +48,34 @@
   font-family: 'Inter';
 }
 
-.heading{
+.heading {
   font-size: 6rem;
-  font-family:'Montserrat-Regular-400';
+  font-family: 'Inter', sans-serif;
   opacity: 100;
+  background: linear-gradient(90deg, rgba(36,76,186,1) 0%, rgba(34,40,49,1) 50%, rgba(57,62,70,1) 100%);
+  color: transparent;
+  background-clip: text;
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+p{
+  font-family: 'Inter';
+  font-weight: 400;
+  color: var(--dark);
+  font-size: 2.2rem;
 }
 
 
@@ -91,11 +119,31 @@
   margin-right: 10px;
 }
 
+#skills h2 {
+  color: var(--dark);
+  font-family: Inter, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #ffa500; /* Cursor effect */
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+#skills li{
+  color: var(--dark);
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+
 /* ----------------------------------------------------------------------------------------------- */
 /* skills  Styling */
 /* ----------------------------------------------------------------------------------------------- */
-
-
 
 
 #about{
