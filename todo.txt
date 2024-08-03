@@ -5,3 +5,5 @@
 5. look for more content to add
 6. add a starting animation
 7. add icone for website ✅
+8. fix footer ✅
+9. added go up button ✅

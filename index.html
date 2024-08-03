@@ -89,15 +89,18 @@
   white : #EEEEEE -->
 
   <body>
-    <div id="preloader"></div>
-    
     <!-- Adding gradient background -->
     <div class="radial-gradient"></div>
 
     <!-- Sticky Section Header -->
     <div id="section-header">
-      <div id="particles-js"></div>
     </div>
+    
+    <!-- Go Up sticky -->
+    <div id="go-up-sticky">
+      <i id="scrollToTopBtn" class="fas fa-arrow-up"></i>
+    </div>
+    
     <!-- About Section -->
     <div id="about" class="Section">
       <div>
@@ -417,6 +420,29 @@
     </script>
     <!-- Import contactme js -->
     <script src="./assets/js/contactme.js"></script>
+
+    <!-- go up Sticky -->
+    <<script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToTopBtn = document.getElementById('go-up-sticky');
+        
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 200) { // Adjust this value to control when the button appears
+            scrollToTopBtn.style.display = 'flex';
+          } else {
+            scrollToTopBtn.style.display = 'none';
+          }
+        });
+    
+        document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+    
   
     <footer class="footer">
       <p>&copy; Aditya Sharma, 2020</p>
