@@ -89,7 +89,9 @@
     <div class="radial-gradient"></div>
 
     <!-- Sticky Section Header -->
-    <div id="section-header"></div>
+    <div id="section-header">
+      <div id="particles-js"></div>
+    </div>
     <!-- About Section -->
     <div id="about" class="Section">
       <div>
@@ -112,65 +114,123 @@
     </div>
 
     <!-- Skills Section -->
-<div id="skills" class="Section">
-  <div class="heading-div">
-    <h1 class="heading">Skills</h1>
-  </div>
-  <div class="section-description">
-    <!-- Row 1: Expertise Areas and Programming Languages -->
-    <div class="row">
-      <div class="column">
-        <h2 class="type-writer">Expertise Areas</h2>
-        <ul>
-          <li><i class="fas fa-code" style="color: #f39c12;"></i> Frontend Development</li>
-          <li><i class="fas fa-object-group" style="color: #e74c3c;"></i> Object-Oriented Programming (OOP)</li>
-          <li><i class="fas fa-database" style="color: #3498db;"></i> Data Structures and Algorithms</li>
-        </ul>
+    <div id="skills" class="Section">
+      <div class="heading-div">
+        <h1 class="heading">Skills</h1>
       </div>
-      <div class="column">
-        <h2 class="type-writer">Programming Languages</h2>
-        <ul>
-          <li><i class="fab fa-cuttlefish" style="color: #8e44ad;"></i> C/C++</li>
-          <li><i class="fab fa-java" style="color: #f39c12;"></i> Java</li>
-          <li><i class="fab fa-python" style="color: #306998;"></i> Python</li>
-          <li><i class="fab fa-js-square" style="color: #f1c40f;"></i> JavaScript</li>
-          <li><i class="fas fa-database" style="color: #3498db;"></i> MySQL</li>
-        </ul>
-      </div>
-    </div>
+      <div class="section-description">
+        <!-- Row 1: Expertise Areas and Programming Languages -->
+        <div class="row">
+          <div class="column">
+            <h2 class="type-writer">
+              <span class="static-text">Expertise </span>
+              <span class="dynamic-text" data-typetext="Areas"></span>
+            </h2>
+            <ul>
+              <li>
+                <i class="fas fa-code" style="color: #f39c12"></i> Frontend
+                Development
+              </li>
+              <li>
+                <i class="fas fa-object-group" style="color: #e74c3c"></i>
+                Object-Oriented Programming (OOP)
+              </li>
+              <li>
+                <i class="fas fa-database" style="color: #3498db"></i> Data
+                Structures and Algorithms
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h2 class="type-writer">Programming Languages</h2>
+            <ul>
+              <li>
+                <i class="fab fa-cuttlefish" style="color: #8e44ad"></i> C/C++
+              </li>
+              <li><i class="fab fa-java" style="color: #f39c12"></i> Java</li>
+              <li>
+                <i class="fab fa-python" style="color: #306998"></i> Python
+              </li>
+              <li>
+                <i class="fab fa-js-square" style="color: #f1c40f"></i>
+                JavaScript
+              </li>
+              <li>
+                <i class="fas fa-database" style="color: #3498db"></i> MySQL
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- Row 2: Tools and Technologies and Technical Electives -->
-    <div class="row">
-      <div class="column">
-        <h2 class="type-writer">Tools and Technologies</h2>
-        <ul>
-          <li><i class="fas fa-cogs" style="color: #2ecc71;"></i> Maven</li>
-          <li><i class="fas fa-pencil-ruler" style="color: #e67e22;"></i> Figma</li>
-          <li><i class="fab fa-github" style="color: #333;"></i> Git/GitHub (version control)</li>
-          <li><i class="fas fa-flask" style="color: #c0392b;"></i> Flask</li>
-          <li><i class="fas fa-desktop" style="color: #1abc9c;"></i> JavaFX</li>
-          <li><i class="fab fa-html5" style="color: #e44d26;"></i> HTML/CSS</li>
-          <li><i class="fas fa-stream" style="color: #3498db;"></i> Streamlit</li>
-          <li><i class="fas fa-cube" style="color: #9b59b6;"></i> NumPy</li>
-          <li><i class="fas fa-table" style="color: #e67e22;"></i> Pandas</li>
-        </ul>
-      </div>
-      <div class="column">
-        <h2 class="type-writer">Technical Electives</h2>
-        <ul>
-          <li><i class="fas fa-laptop-code" style="color: #2ecc71;"></i> Introduction to Programming</li>
-          <li><i class="fas fa-code-branch" style="color: #f39c12;"></i> Data Structures and Algorithms</li>
-          <li><i class="fas fa-microchip" style="color: #e74c3c;"></i> Computer Organization</li>
-          <li><i class="fas fa-server" style="color: #3498db;"></i> Operating Systems</li>
-          <li><i class="fas fa-code" style="color: #9b59b6;"></i> Advanced Programming</li>
-          <li><i class="fas fa-superscript" style="color: #e67e22;"></i> Discrete Mathematics</li>
-          <li><i class="fas fa-database" style="color: #3498db;"></i> Fundamentals of Database Management Systems</li>
-          <li><i class="fas fa-project-diagram" style="color: #2ecc71;"></i> Algorithm Design and Analysis</li>
-        </ul>
+        <!-- Row 2: Tools and Technologies and Technical Electives -->
+        <div class="row">
+          <div class="column">
+            <h2 class="type-writer">Tools and Technologies</h2>
+            <ul>
+              <li><i class="fas fa-cogs" style="color: #2ecc71"></i> Maven</li>
+              <li>
+                <i class="fas fa-pencil-ruler" style="color: #e67e22"></i> Figma
+              </li>
+              <li>
+                <i class="fab fa-github" style="color: #333"></i> Git/GitHub
+                (version control)
+              </li>
+              <li><i class="fas fa-flask" style="color: #c0392b"></i> Flask</li>
+              <li>
+                <i class="fas fa-desktop" style="color: #1abc9c"></i> JavaFX
+              </li>
+              <li>
+                <i class="fab fa-html5" style="color: #e44d26"></i> HTML/CSS
+              </li>
+              <li>
+                <i class="fas fa-stream" style="color: #3498db"></i> Streamlit
+              </li>
+              <li><i class="fas fa-cube" style="color: #9b59b6"></i> NumPy</li>
+              <li>
+                <i class="fas fa-table" style="color: #e67e22"></i> Pandas
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h2 class="type-writer">Technical Electives</h2>
+            <ul>
+              <li>
+                <i class="fas fa-laptop-code" style="color: #2ecc71"></i>
+                Introduction to Programming
+              </li>
+              <li>
+                <i class="fas fa-code-branch" style="color: #f39c12"></i> Data
+                Structures and Algorithms
+              </li>
+              <li>
+                <i class="fas fa-microchip" style="color: #e74c3c"></i> Computer
+                Organization
+              </li>
+              <li>
+                <i class="fas fa-server" style="color: #3498db"></i> Operating
+                Systems
+              </li>
+              <li>
+                <i class="fas fa-code" style="color: #9b59b6"></i> Advanced
+                Programming
+              </li>
+              <li>
+                <i class="fas fa-superscript" style="color: #e67e22"></i>
+                Discrete Mathematics
+              </li>
+              <li>
+                <i class="fas fa-database" style="color: #3498db"></i>
+                Fundamentals of Database Management Systems
+              </li>
+              <li>
+                <i class="fas fa-project-diagram" style="color: #2ecc71"></i>
+                Algorithm Design and Analysis
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- Projects Section -->
     <div id="projects" class="Section">
@@ -323,7 +383,7 @@
           <button type="submit">Send Message</button>
         </form>
       </div>
-      <div id="form-feedback" style="margin-top: 15px; font-size: 2rem;"></div>
+      <div id="form-feedback" style="margin-top: 15px; font-size: 2rem"></div>
     </div>
 
     <!-- Import JS: Particles Theme -->

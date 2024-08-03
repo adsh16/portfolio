@@ -48,17 +48,44 @@
   font-family: 'Inter';
 }
 
+/* adding psedo element for udnerline */
+/* ------------------------------------------------------------------------------------------------------ */
 .heading {
   font-size: 6rem;
   font-family: 'Inter', sans-serif;
   opacity: 100;
-  background: linear-gradient(90deg, rgba(36,76,186,1) 0%, rgba(34,40,49,1) 50%, rgba(57,62,70,1) 100%);
+  background: linear-gradient(90deg, rgba(36, 76, 186, 1) 0%, rgba(34, 40, 49, 1) 50%, rgba(57, 62, 70, 1) 100%);
+  margin-bottom: 0;
   color: transparent;
   background-clip: text;
   background-size: 400% 400%;
   animation: gradient 8s ease infinite;
 }
 
+/* Adding pseudo element for underline */
+.heading-div {
+  position: relative;
+  display: inline-block;
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* Adjust this value to bring the underline closer */
+  width: 160%; /* Change this to 100% for a better fit */
+  height: 7px; /* Adjust the height as needed */
+  background: linear-gradient(to right, rgba(36, 76, 186, 1), rgba(36, 76, 186, 0) 100%); /* Fading effect */
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 0.5s; /* Adjust the duration for the scale transition */
+}
+
+.heading-div:hover .heading::after {
+  transform: scaleX(0);
+}
+
+/* Add your gradient animation keyframes */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -70,6 +97,8 @@
     background-position: 0% 50%;
   }
 }
+
+/* ------------------------------------------------------------------------------------------------------ */
 
 p{
   font-family: 'Inter';
@@ -90,8 +119,26 @@ p{
 /* ----------------------------------------------------------------------------------------------- */
 /* skills  Styling */
 /* ----------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------- */
+/*  typewriter effect  Styling */
+/* ----------------------------------------------------------------------------------------------- */
+
+.type-writer {
+  border-right: 0.15em solid orange;  
+  animation: blink-caret 0.1s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
 /* Glow of skills section */
-/* Add this CSS to your stylesheet */
 /* Container for the rows */
 .Section .section-description .row {
   display: flex;
@@ -119,19 +166,18 @@ p{
   margin-right: 10px;
 }
 
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* skills  Styling */
+/* ----------------------------------------------------------------------------------------------- */
+
 #skills h2 {
   color: var(--dark);
   font-family: Inter, sans-serif;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.15em solid #ffa500; /* Cursor effect */
   animation: blink-caret 0.75s step-end infinite;
-}
-
-/* Blinking cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
 }
 
 #skills li{
@@ -140,10 +186,6 @@ p{
   font-weight: 400;
 }
 
-
-/* ----------------------------------------------------------------------------------------------- */
-/* skills  Styling */
-/* ----------------------------------------------------------------------------------------------- */
 
 
 #about{
@@ -169,6 +211,22 @@ p{
 /* ----------------------------------------------------------------------------------------------- */
 /* Skills  Styling */
 /* ----------------------------------------------------------------------------------------------- */
+
+.type-writer {
+  color: var(--dark);
+  font-family: Inter, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dynamic-text {
+  border-right: 0.15em solid transparent;
+  transition: border-right-color 0.1s;
+}
+
+.dynamic-text:hover {
+  border-right-color: orange;
+}
 
 #skills ul {
   list-style-type: none; /* Remove bullets */
@@ -294,10 +352,12 @@ img {
   padding: 10px;
   text-align: center;
   color: var(--white);
-  font-size: 24px;
-  font-weight: bold;
-  z-index: 1000;
+  font-size: 3rem;    
+  font-family: Inter;
+  font-weight: 800;
+  z-index: 1;
 }
+
 /* ----------------------------------------------------------------------------------------------- */
 /* Contact Form Styling */
 /* ----------------------------------------------------------------------------------------------- */

@@ -1,25 +1,31 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var element = document.querySelectorAll(".type-writer");
-    console.log(element)
-    var text = element.innerHTML;
-    var typingSpeed = 100; // Adjust typing speed here
-    var delayBetweenRepeats = 2000; // Delay before restarting the typing effect
-
-    function typeWriter(text, i) {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(function() {
-                typeWriter(text, i);
-            }, typingSpeed);
+document.addEventListener("DOMContentLoaded", function () {
+    const dynamicText = document.querySelector(".dynamic-text");
+    const originalText = dynamicText.dataset.typetext;
+    let typingInterval;
+  
+    function startTyping() {
+      let textArray = originalText.split("");
+      let counter = -1;
+      dynamicText.innerHTML = "";
+      dynamicText.style.setProperty('--cursor-position', '0ch');
+  
+      clearInterval(typingInterval);
+  
+      function typeJs() {
+        if (counter < textArray.length - 1) {
+          counter++;
+          dynamicText.innerHTML = textArray.slice(0, counter + 1).join('');
+          dynamicText.style.setProperty('--cursor-position', `${counter + 1}ch`);
         } else {
-            setTimeout(function() {
-                element.innerHTML = "";
-                typeWriter(text, 0);
-            }, delayBetweenRepeats);
+          clearInterval(typingInterval);
         }
+      }
+  
+      typingInterval = setInterval(typeJs, 100); // Adjust typing speed here
     }
-
-    element.innerHTML = ""; // Clear the initial text
-    typeWriter(text, 0); // Start the typing effect
-});
+  
+    dynamicText.addEventListener("mouseenter", startTyping);
+  
+    // Initial typing effect
+    startTyping();
+  });
