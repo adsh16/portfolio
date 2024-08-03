@@ -4,4 +4,4 @@
 4. fix highlighting
 5. look for more content to add
 6. add a starting animation
-7. add image for 
+7. add icone for website ✅

@@ -1,31 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const dynamicText = document.querySelector(".dynamic-text");
-    const originalText = dynamicText.dataset.typetext;
-    let typingInterval;
+document.addEventListener("DOMContentLoaded", function() {
+    var typeWriters = document.querySelectorAll(".type-writer");
   
-    function startTyping() {
-      let textArray = originalText.split("");
-      let counter = -1;
-      dynamicText.innerHTML = "";
-      dynamicText.style.setProperty('--cursor-position', '0ch');
+    typeWriters.forEach(function(typeWriter) {
+      var fullText = typeWriter.textContent.trim(); // Get the full text content
+      var initialText = fullText.slice(0, 3); // Get the first three characters
+      var remainingText = fullText.slice(3); // Get the rest of the text
+      var speed = 100; // Delay between each character (in milliseconds)
+      var isAnimating = false; // Flag to prevent multiple animations
   
-      clearInterval(typingInterval);
+      function typeEffect() {
+        var index = 0;
+        typeWriter.textContent = initialText; // Reset to initial text
+        isAnimating = true; // Set the flag to indicate animation is running
   
-      function typeJs() {
-        if (counter < textArray.length - 1) {
-          counter++;
-          dynamicText.innerHTML = textArray.slice(0, counter + 1).join('');
-          dynamicText.style.setProperty('--cursor-position', `${counter + 1}ch`);
-        } else {
-          clearInterval(typingInterval);
+        function type() {
+          if (index < remainingText.length) {
+            typeWriter.textContent += remainingText.charAt(index);
+            index++;
+            setTimeout(type, speed);
+          } else {
+            isAnimating = false; // Reset the flag when animation completes
+          }
         }
+  
+        type();
       }
   
-      typingInterval = setInterval(typeJs, 100); // Adjust typing speed here
-    }
+      // Start animation on content load
+      setTimeout(typeEffect, 1000);
   
-    dynamicText.addEventListener("mouseenter", startTyping);
-  
-    // Initial typing effect
-    startTyping();
+      // Start animation on hover if not already running
+      typeWriter.addEventListener("mouseenter", function() {
+        if (!isAnimating) {
+          typeEffect();
+        }
+      });
+    });
   });
+  

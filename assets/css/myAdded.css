@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
 
+
+/* Content loading effect */
+/* CSS for fade-in effect */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------------- */
+
 /* Colour palette */
 :root {
   --dark: #222831;
@@ -115,6 +135,24 @@ p{
   transition: transform 0.2s ease; /* Smooth transition */
 }
 
+#about{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(min-width:1000px){
+  #about-photo{
+    min-width: 350px;
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #about {
+    flex-direction: column;
+  }
+}
 
 /* ----------------------------------------------------------------------------------------------- */
 /* skills  Styling */
@@ -124,19 +162,6 @@ p{
 /*  typewriter effect  Styling */
 /* ----------------------------------------------------------------------------------------------- */
 
-.type-writer {
-  border-right: 0.15em solid orange;  
-  animation: blink-caret 0.1s step-end infinite;
-}
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
 
 /* Glow of skills section */
 /* Container for the rows */
@@ -166,20 +191,6 @@ p{
   margin-right: 10px;
 }
 
-
-
-/* ----------------------------------------------------------------------------------------------- */
-/* skills  Styling */
-/* ----------------------------------------------------------------------------------------------- */
-
-#skills h2 {
-  color: var(--dark);
-  font-family: Inter, sans-serif;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blink-caret 0.75s step-end infinite;
-}
-
 #skills li{
   color: var(--dark);
   font-family: 'Inter';
@@ -188,51 +199,50 @@ p{
 
 
 
-#about{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+#skills ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }
 
-@media(min-width:1000px){
-  #about-photo{
-    min-width: 350px;
-    margin-left: 100px;
+
+/* ----------------------------------------------------------------------------------------------- */
+/* skills  Styling */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+#skills h2 {
+  color: var(--dark);
+  font-family: Inter, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 4px solid orange; /* Cursor effect */
+  padding-right: 5px;
+  animation: typing 2s steps(30) 1s 1 normal both, cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    border-color: transparent;
   }
 }
 
-@media (max-width: 1000px) {
-  #about {
-    flex-direction: column;
-  }
-}
+/* .skills-subsection-div{
+
+} */
+
 
 
 /* ----------------------------------------------------------------------------------------------- */
 /* Skills  Styling */
 /* ----------------------------------------------------------------------------------------------- */
 
-.type-writer {
-  color: var(--dark);
-  font-family: Inter, sans-serif;
-  white-space: nowrap;
-  overflow: hidden;
-}
 
-.dynamic-text {
-  border-right: 0.15em solid transparent;
-  transition: border-right-color 0.1s;
-}
 
-.dynamic-text:hover {
-  border-right-color: orange;
-}
-
-#skills ul {
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
-}
+/* ----------------------------------------------------------------------------------------------- */
+/* Project  Styling */
+/* ----------------------------------------------------------------------------------------------- */
 
 /* Projects Section */
 #projects-container{
@@ -247,10 +257,6 @@ p{
     flex-wrap: nowrap;
   }
 }
-
-/* ----------------------------------------------------------------------------------------------- */
-/* Project  Styling */
-/* ----------------------------------------------------------------------------------------------- */
 .project-photo {
   margin: 0;
   padding: 12px;
