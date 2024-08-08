@@ -24,12 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(function(response) {
           console.log('Email sent successfully:', response);
           // Show success message on the page with border
-          document.getElementById('form-feedback').innerHTML = '<p style="color: green; border: 2px solid green; padding: 10px; border-radius: 5px;">Message sent successfully! Thank you for getting in touch.</p>';
+          // document.getElementById('form-feedback').innerHTML = '<p style="color: green; border: 2px solid black; padding: 10px; border-radius: 5px;">Message sent successfully! Thank you for getting in touch.</p>';
+          alert("Hello! Your message was sent successfully!");
           document.getElementById('contact-form').reset(); // Reset form
+
         }, function(error) {
           console.error('Failed to send the message:', error);
           // Show error message on the page with border
-          document.getElementById('form-feedback').innerHTML = '<p style="color: red; border: 2px solid red; padding: 10px; border-radius: 5px;">Failed to send the message. Please try again later.</p>';
+          // document.getElementById('form-feedback').innerHTML = '<p style="color: red; border: 2px solid red; padding: 10px; border-radius: 5px;">Failed to send the message. Please try again later.</p>';
+          alert("Oops! There was some error sending your message");
         });
     });
   });

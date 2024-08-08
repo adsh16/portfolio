@@ -1,9 +1,10 @@
 1. add psedo element for underline of heading with gradient disappera ✅
-2. fix typing effect in skills
-3. fix projects
+2. fix typing effect in skills ✅
+3. fix projects ✅
 4. fix highlighting
 5. look for more content to add
-6. add a starting animation
+6. add a starting animation ✅
 7. add icone for website ✅
 8. fix footer ✅
 9. added go up button ✅
+10. Fix contact me page ✅

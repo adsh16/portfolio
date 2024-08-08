@@ -31,6 +31,10 @@
   --orange : #ffa500;
 }
 /* --------------------------------------- */
+
+
+
+
 .radial-gradient {
   position:fixed;
   top:0px;
@@ -244,6 +248,15 @@ p{
 /* Project  Styling */
 /* ----------------------------------------------------------------------------------------------- */
 
+ /* Span for bold in projects */
+
+ .project-details-bold{
+  font-weight: bolder;
+  color: #000;
+}
+
+
+
 /* Projects Section */
 #projects-container{
   display: flex;
@@ -257,22 +270,88 @@ p{
     flex-wrap: nowrap;
   }
 }
+
+/* --------------------------------------------- */
+/* project photo css */
+/* --------------------------------------------- */
+
+.project-tile{
+  overflow: visible;
+}
+
+/* Existing styles */
 .project-photo {
   margin: 0;
   padding: 12px;
-  width: 376px;
+  width: 400px;
+  aspect-ratio: 4 / 3;
   height: 235px;
+  position: relative; /* Add this line */
+  overflow: visible;   /* Add this line */
+}
+
+/* Existing styles */
+.project-photo {
+  margin: 0;
+  padding: 12px;
+  width: 400px;
+  aspect-ratio: 4 / 3;
+  height: 235px;
+  position: relative; /* Ensures ::before is positioned relative to this element */
+  overflow: hidden;   /* Ensures growing image doesn't overflow the container */
 }
 
 .project-photo img {
   border-radius: 8px;
   opacity: 0.8;
-  transition: opacity 0.8s ease;
+  display: block;     /* Ensures image is displayed as a block-level element */
+  width: 100%;        /* Ensures image takes up full width of its container */
+  height: 100%;       /* Ensures image takes up full height of its container */
+  transition: transform 0.25s ease-out; /* Smooth transition for transform property */
 }
 
-.project-photo img:hover {
-  opacity: 1;
+.project-photo:hover img {
+  transform: scale(1.1); /* Scales the image up by 10% */
 }
+
+/* Shine effect */
+.project-photo::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+  transform: skewX(-25deg);
+}
+
+.project-photo:hover::before {
+  animation: shine 0.75s forwards; /* Triggers the shine animation on hover */
+}
+
+@keyframes shine {
+  100% {
+    left: 125%; /* Moves the shine effect across the image */
+  }
+}
+
+.project-photo:hover::before {
+  animation: shine 0.75s forwards;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+
+/* --------------------------------------------- */
+/* project photo css */
+/* --------------------------------------------- */
 
 .project-tile {
   display: flex;
@@ -281,14 +360,15 @@ p{
   align-items: center;
   max-width: 400px; /* Adjust the max-width as needed */
   margin: 10px;
-  border: 3px solid var(--blue); /* Blue border */
+  border: 5px solid var(--dark); /* Blue border */
+  /* background-color:#6f6f6f; */
   border-radius: 4px;
   padding: 10px;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
   }
   
 .project-tile:hover {
-  border-color: var(--lightblue); /* Blue border on hover */
+  border-color: var(--blue); /* Blue border on hover */
   box-shadow: 0 0 15px var(--blue); /* Blue shadow on hover */
 }
 
@@ -297,7 +377,9 @@ p{
 }
 
 .project-details h2{
+  font-family: 'Inter';
   font-size: 2rem;
+  font-weight: 700;
 }
 .project-details p{
   font-size: 1.2rem;
@@ -387,64 +469,128 @@ img {
   transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
 
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* testing Styling */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* testing Styling */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
 /* ----------------------------------------------------------------------------------------------- */
 /* Contact Form Styling */
 /* ----------------------------------------------------------------------------------------------- */
+/* Container Style */
+
+
 #contact-form {
-  margin-left: 10px;
-  max-width: 600px;
-  min-width: 200px;
+  display: block;
+  text-align: left;
+  height: 500px;
+  width: 500px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin: 20px auto;
+  position: relative;
+  text-align: left; /* Ensure the form is left-aligned */
 }
 
-.form-group {
-  margin-bottom: 15px;
+/* Form Group Styles */
+#contact-form .form-group {
+  margin-bottom: 28px;
 }
 
-.form-group label {
+#contact-form .form-group label {
   display: block;
   margin-bottom: 5px;
-  font-family: 'Inter';
-  font-size: 1.2rem;
+  font-size: 18px;
+  font-weight:600;
+  color: var(--blue);
 }
 
-.form-group input,
-.form-group textarea {
+#contact-form .form-group input,
+#contact-form .form-group textarea {
   width: 100%;
   padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
 }
 
-button[type="submit"] {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 5px;
+#contact-form .form-group input:focus,
+#contact-form .form-group textarea:focus {
+  border-bottom: 2px solid #78788c;
+}
+
+/* Button Styles */
+#contact-form button[type="submit"] {
+  display: block; /* Make button a block element */
+  margin: 8px auto 0 auto; /* Center the button */
+  padding: 8px 12px;
+  font-family: 'Inter', sans-serif;
+  border: 2px solid #78788c;
+  background: none;
+  color: var(--blue);
   cursor: pointer;
+  transition: all 0.3s;
 }
 
-button[type="submit"]:hover {
-  background-color: #004c9e;
+#contact-form button[type="submit"]:hover {
+  background: var(--lightblue);
+  color: #fff;
 }
+/* 
+
+/* Feedback Styles */
+#contact-form #form-feedback {
+  content: 'Hi';
+  position: absolute;
+  bottom: -15px;
+  right: -20px;
+  background: #50505a;
+  color: #fff;
+  width: 320px;
+  padding: 16px 4px 16px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 10px 10px 40px -14px #000;
+} 
+
+
 
 /* Footer */
 /* ----------------------------------------------------------------------------------------------- */
 .footer {
   background: #1488CC;
-  background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
   background: linear-gradient(to right, #2B32B2, #1488CC);
-  padding: 20px 0;
+  /* padding: 20px 0;
   margin-top: 100px;
+  margin-left: 0px;
+  margin-right: 0px; */
   text-align: center;
   color: #fff;
-}
-
-.footer .love {
-  color: red;
+  clear: both;
+  width: 100%;
+  overflow: hidden;
 }
 
 .footer p{
