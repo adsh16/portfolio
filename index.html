@@ -1,597 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Metadata of the Webpage -->
-    <!-- Character-set Metadata -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Viewport Metadata -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Description Metadata-->
-    <meta name="description" content="Portfolio Website" />
-    <!-- Author Metadata -->
-    <meta name="author" content="Aditya Sharma" />
-    <!-- Webpage Logo -->
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-    <!-- Webpage Title -->
-    <title>Aditya Sharma</title>
-    <!-- Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya Sharma preloader</title>
+    <link rel="stylesheet" href="./assets/css/preloader.css" />
+    <style>
+      .stop-animation .box {
+        animation: none !important;
+      }
 
-    <!-- Adding icone for website -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon_io/favicon-16x16.png"
-    />
-    <!-- Include jQuery library -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      .fade-out {
+        animation: fadeOut 1s forwards;
+      }
 
-    <!-- Your other head content -->
-    <!-- Import CSS: Main Stylesheet -->
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <!-- Import CSS: myAdded Stylesheet -->
-    <link rel="stylesheet" href="./assets/css/myAdded.css" />
-    <!-- Import Google Font: Nabla -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Linking gradient js -->
-    <link href="./assets/css/normalize.css" rel="stylesheet" />
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
-  <!-- Colour pallete
-  dark : #222831
-  grey : #393E46
-  blue : #00ADB5
-  white : #EEEEEE -->
-
   <body>
-    <div id="particles-js">
-      <div class="header">
-        <h1>
-          <span class="site-title">👋 Hi, I'am ADITYA SHARMA</span>
-          <span class="site-description">Programmer - Web Developer</span>
-        </h1>
-        <div class="header-icons">
-          <a
-            aria-label="My LinkedIn Profile"
-            target="_blank"
-            href="https://www.linkedin.com/in/aditya-sharma-04360125a/"
-          >
-            <i class="icon fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a
-            aria-label="My Github Profile"
-            target="_blank"
-            href="https://github.com/adsh16"
-          >
-            <i class="icon fa fa-github-alt" aria-hidden="true"></i>
-          </a>
-          <a aria-label="My Résumé" target="_blank" href="resume.html">
-            <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
-          </a>
-          <a
-            aria-label="Send Email"
-            href="mailto:aditya22038@iiitd.ac.in"
-            target="_blank"
-            ><i class="icon fa fa-envelope"></i
-          ></a>
-        </div>
-        <div class="header-links">
-          <a class="link" href="#about" data-scroll>About Me</a>
-          <a class="link" href="#projects" data-scroll>Projects</a>
-          <a class="link" href="#contact" data-scroll>Contact me</a>
-        </div>
+    <div class="boxes">
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <a class="down" href="#about" data-scroll>
-        <i class="icon fa fa-chevron-down" aria-hidden="true"></i
-      ></a>
-    </div>
-
-    <!-- Adding gradient background -->
-    <div class="radial-gradient"></div>
-
-    <!-- Sticky Section Header -->
-    <div id="section-header"></div>
-
-    <!-- Go Up sticky -->
-    <div id="go-up-sticky">
-      <i id="scrollToTopBtn" class="fas fa-arrow-up"></i>
-    </div>
-
-    <!-- About Section -->
-    <div id="about" class="Section">
-      <div>
-        <div class="heading-div">
-          <h1 class="heading">About me</h1>
-        </div>
-        <div class="section-description">
-          <p>
-            I am in 2nd year in Indraprastha Institute of Information Technology
-            Delhi pursuing an undergraduate degree. I am majoring in Computer
-            Science. I'm an aspiring Software Developer. I am interested in
-            exploring the fields of Software Engineering, Data Science, and
-            Machine Learning, and I am open to opportunities for the same.
-          </p>
-        </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <div id="about-photo">
-        <img class="tilt" src="./assets/img/profile_pic.png" alt="me" />
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
 
-    <!-- Skills Section -->
-    <div id="skills" class="Section">
-      <div class="heading-div">
-        <h1 class="heading">Skills</h1>
-      </div>
-      <div class="section-description">
-        <!-- Row 1: Expertise Areas and Programming Languages -->
-        <div class="row">
-          <div class="column">
-            <h2 class="type-writer">Expertise</h2>
-            <ul>
-              <li>
-                <i class="fas fa-code" style="color: #f39c12"></i> Frontend
-                Development
-              </li>
-              <li>
-                <i class="fas fa-object-group" style="color: #e74c3c"></i>
-                Object-Oriented Programming (OOP)
-              </li>
-              <li>
-                <i class="fas fa-database" style="color: #3498db"></i> Data
-                Structures and Algorithms
-              </li>
-            </ul>
-          </div>
-          <div class="column">
-            <h2 class="type-writer">Programming Languages</h2>
-            <ul>
-              <li>
-                <i class="fab fa-cuttlefish" style="color: #8e44ad"></i> C/C++
-              </li>
-              <li><i class="fab fa-java" style="color: #f39c12"></i> Java</li>
-              <li>
-                <i class="fab fa-python" style="color: #306998"></i> Python
-              </li>
-              <li>
-                <i class="fab fa-js-square" style="color: #f1c40f"></i>
-                JavaScript
-              </li>
-              <li>
-                <i class="fas fa-database" style="color: #3498db"></i> MySQL
-              </li>
-            </ul>
-          </div>
-        </div>
+    <!-- dribbble -->
+    <a
+      class="dribbble"
+      href="https://dribbble.com/shots/5533600-Loading-boxes"
+      target="_blank"
+      ><img
+        src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg"
+        alt=""
+    /></a>
 
-        <!-- Row 2: Tools and Technologies and Technical Electives -->
-        <div class="row">
-          <div class="column">
-            <h2 class="type-writer">Tools and Technologies</h2>
-            <ul>
-              <li><i class="fas fa-cogs" style="color: #2ecc71"></i> Maven</li>
-              <li>
-                <i class="fas fa-pencil-ruler" style="color: #e67e22"></i> Figma
-              </li>
-              <li>
-                <i class="fab fa-github" style="color: #333"></i> Git/GitHub
-                (version control)
-              </li>
-              <li><i class="fas fa-flask" style="color: #c0392b"></i> Flask</li>
-              <li>
-                <i class="fas fa-desktop" style="color: #1abc9c"></i> JavaFX
-              </li>
-              <li>
-                <i class="fab fa-html5" style="color: #e44d26"></i> HTML/CSS
-              </li>
-              <li>
-                <i class="fas fa-stream" style="color: #3498db"></i> Streamlit
-              </li>
-              <li><i class="fas fa-cube" style="color: #9b59b6"></i> NumPy</li>
-              <li>
-                <i class="fas fa-table" style="color: #e67e22"></i> Pandas
-              </li>
-            </ul>
-          </div>
-          <div class="column">
-            <h2 class="type-writer">Technical Electives</h2>
-            <ul>
-              <li>
-                <i class="fas fa-laptop-code" style="color: #2ecc71"></i>
-                Introduction to Programming
-              </li>
-              <li>
-                <i class="fas fa-code-branch" style="color: #f39c12"></i> Data
-                Structures and Algorithms
-              </li>
-              <li>
-                <i class="fas fa-microchip" style="color: #e74c3c"></i> Computer
-                Organization
-              </li>
-              <li>
-                <i class="fas fa-server" style="color: #3498db"></i> Operating
-                Systems
-              </li>
-              <li>
-                <i class="fas fa-code" style="color: #9b59b6"></i> Advanced
-                Programming
-              </li>
-              <li>
-                <i class="fas fa-superscript" style="color: #e67e22"></i>
-                Discrete Mathematics
-              </li>
-              <li>
-                <i class="fas fa-database" style="color: #3498db"></i>
-                Fundamentals of Database Management Systems
-              </li>
-              <li>
-                <i class="fas fa-project-diagram" style="color: #2ecc71"></i>
-                Algorithm Design and Analysis
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Projects Section -->
-    <div id="projects" class="Section">
-      <div class="heading-div">
-        <h1 class="heading">My Projects</h1>
-      </div>
-      <p class="section-description">
-        I love to create things, and I'm always working on something new! You
-        can view some of my favorite projects below.
-      </p>
-      <div id="projects-container">
-        <!-- Project 1: Online Design Store -->
-        <div class="project-tile">
-          <div class="project-photo">
-            <img
-              class="tilt"
-              src="./assets/img/projects/online-store.png"
-              alt="Online Design Store Photo"
-            />
-          </div>
-          <div class="project-details">
-            <h2>Online Design Store</h2>
-            <p>
-              Developed a comprehensive <span class="project-details-bold"> online web store</span> using Python, HTML/CSS,
-              Flask, and MySQL. The project features secure authentication, a
-              shopping cart system, order placement functionality, discount
-              application, and a detailed admin dashboard. <span class="project-details-bold">SQL triggers</span> and
-              <span class="project-details-bold">transactions</span> were implemented to ensure data consistency and
-              reliability.
-            </p>
-            <div class="project-tech">
-              <ul>
-                <li>Python</li>
-                <li>Flask</li>
-                <li>MySQL</li>
-                <li>HTML/CSS</li>
-              </ul>
-            </div>
-            <div class="github-link">
-              <a href="https://github.com/yourusername/online-design-store">
-                <i class="fa fa-github" style="font-size: 48px"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2: StickNinja game -->
-        <div class="project-tile">
-          <div class="project-photo">
-            <img
-              class="tilt"
-              src="./assets/img/projects/stickninja.png"
-              alt="StickNinja Game Photo"
-            />
-          </div>
-          <div class="project-details">
-            <h2>StickNinja</h2>
-            <p>
-              Created an engaging game inspired by "Stick Hero" using
-              <span class="project-details-bold">Object-Oriented Principles</span> and the JavaFX library in Java. The
-              game features core mechanics including a pause menu, cherry/point
-              collection system, animations, and score tracking.
-            </p>
-            <div class="project-tech">
-              <ul>
-                <li>Java</li>
-                <li>JavaFX</li>
-                <li>Object-Oriented Programming</li>
-              </ul>
-            </div>
-            <div class="github-link">
-              <a href="https://github.com/yourusername/stickninja">
-                <i class="fa fa-github" style="font-size: 48px"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: Custom Memory Management System (MeMs) -->
-        <div class="project-tile">
-          <div class="project-photo">
-            <img
-              class="tilt"
-              src="./assets/img/projects/mems.png"
-              alt="MeMs Project Photo"
-            />
-          </div>
-          <div class="project-details">
-            <h2>MeMs</h2>
-            <p>
-              Developed a C header file that utilizes system calls for memory
-              demands and manages memory using a free list data structure. The
-              system features <span class="project-details-bold">memory allocation</span> and <span class="project-details-bold">deallocation</span>, <span class="project-details-bold">address
-              translation</span> between virtual and physical addresses, and provides
-              detailed statistics reporting.
-            </p>
-            <div class="project-tech">
-              <ul>
-                <li>C</li>
-                <li>Memory Management</li>
-                <li>Systems Programming</li>
-              </ul>
-            </div>
-            <div class="github-link">
-              <a href="https://github.com/yourusername/mems">
-                <i class="fa fa-github" style="font-size: 48px"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: RISCAssist -->
-        <div class="project-tile">
-          <div class="project-photo">
-            <img
-              class="tilt"
-              src="./assets/img/projects/riscassist.png"
-              alt="RISCAssist Project Photo"
-            />
-          </div>
-          <div class="project-details">
-            <h2>RISCAssist</h2>
-            <p>
-              Designed and implemented an Assembler and Simulator for a
-              hypothetical <span class="project-details-bold">Instruction Set Architecture (ISA)</span> based on <span class="project-details-bold">RISC</span>
-              principles. The Assembler converts Assembly code into Binary
-              strings, while the Simulator uses the generated Binary Code to
-              store values in registers.
-            </p>
-            <div class="project-tech">
-              <ul>
-                <li>C</li>
-                <li>Assembly</li>
-                <li>RISC Architecture</li>
-              </ul>
-            </div>
-            <div class="github-link">
-              <a href="https://github.com/yourusername/riscassist">
-                <i class="fa fa-github" style="font-size: 48px"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5: cfStats -->
-        <div class="project-tile">
-          <div class="project-photo">
-            <img
-              class="tilt"
-              src="./assets/img/projects/cfStats.png"
-              alt="cfStats Project Photo"
-            />
-          </div>
-          <div class="project-details">
-            <h2>cfStats</h2>
-            <p>
-              Developed a <span class="project-details-bold">Chrome extension</span> that displays user statistics for
-              codeforces.com. The extension utilizes the <span class="project-details-bold">Codeforces API</span> to fetch
-              and parse user data, and integrates Chart.js to visually represent
-              the data in the profile section.
-            </p>
-            <div class="project-tech">
-              <ul>
-                <li>JavaScript</li>
-                <li>Codeforces API</li>
-                <li>Chart.js</li>
-              </ul>
-            </div>
-            <div class="github-link">
-              <a href="https://github.com/yourusername/cfstats">
-                <i class="fa fa-github" style="font-size: 48px"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6: Econometric Analysis of Groundwater Quality -->
-        <div class="project-tile">
-          <div class="project-photo">
-            <img
-              class="tilt"
-              src="./assets/img/projects/econometric_analysis.png"
-              alt="Econometric Analysis Project Photo"
-            />
-          </div>
-          <div class="project-details">
-            <h2>Econometric Analysis of Groundwater Quality in India</h2>
-            <p>
-              Conducted an in-depth data and regression analysis using Python,
-              NumPy, pandas, and statsmodel. The project analyzed the impact of
-              economic growth on environmental indicators using SDP and Gini
-              index data. It also explored the <span class="project-details-bold">Environmental Kuznets Curve</span> and
-              <span class="project-details-bold">regional disparities</span> through advanced modeling techniques.
-            </p>
-            <div class="project-tech">
-              <ul>
-                <li>Python</li>
-                <li>NumPy</li>
-                <li>Pandas</li>
-                <li>Statsmodel</li>
-              </ul>
-            </div>
-            <div class="github-link">
-              <a
-                href="https://github.com/yourusername/groundwater-quality-analysis"
-              >
-                <i class="fa fa-github" style="font-size: 48px"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Get in Touch Section -->
-    <div id="contact" class="Section">
-      <div class="heading-div">
-        <h1 class="heading">Contact Me</h1>
-      </div>
-      <p class="section-description">
-        My inbox is always open. I'll try my best to get back to you as soon as
-        possible! Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
-      </p>
-      <div class="header-icons">
-        <a
-          aria-label="My LinkedIn Profile"
-          target="_blank"
-          href="https://www.linkedin.com/in/aditya-sharma-04360125a/"
-        >
-          <i class="icon fa fa-linkedin" aria-hidden="true"></i>
-        </a>
-        <a
-          aria-label="My Github Profile"
-          target="_blank"
-          href="https://github.com/adsh16"
-        >
-          <i class="icon fa fa-github-alt" aria-hidden="true"></i>
-        </a>
-        <a aria-label="My Résumé" target="_blank" href="resume.html">
-          <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
-        </a>
-        <a
-          aria-label="Send Email"
-          href="mailto:aditya22038@iiitd.ac.in"
-          target="_blank"
-          ><i class="icon fa fa-envelope"></i
-        ></a>
-      </div>
-
-      <div id="contact-form-div">
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Write Your Name here"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="example123@gmail.com"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="What would you like to talk about"
-              required
-            ></textarea>
-          </div>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Import JS: Particles Theme -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Import JS: Main Script -->
-    <script src="./assets/js/main.js"></script>
-    <!-- Import JS: Sweet Scroll -->
-    <script src="./assets/js/sweet-scroll.min.js"></script>
-    <!-- Import JS: Section Header Script -->
-    <script src="./assets/js/section-header.js"></script>
-    <!-- Import JS: Radiant Background script -->
-    <script src="./assets/js/radiant_background.js"></script>
-    <!-- Import JS:Image tilter script -->
-    <script src="./assets/js/image-tilter.js"></script>
-    <!-- Import JS:Type writer script -->
-    <script src="./assets/js/typewriter.js"></script>
-    <!-- Email js -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "cRInRVJ89rJr9D19M",
-        });
-      })();
-    </script>
-    <!-- Import contactme js -->
-    <script src="./assets/js/contactme.js"></script>
-
-    <!-- go up Sticky -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const scrollToTopBtn = document.getElementById("go-up-sticky");
-
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 200) {
-            // Adjust this value to control when the button appears
-            scrollToTopBtn.style.display = "flex";
-          } else {
-            scrollToTopBtn.style.display = "none";
-          }
-        });
-
-        document
-          .getElementById("scrollToTopBtn")
-          .addEventListener("click", function () {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          });
-      });
+      // JavaScript to stop animation, apply fade-out effect, and then redirect to index.html
+      setTimeout(function() {
+        document.body.classList.add('stop-animation');
+        setTimeout(function() {
+          document.body.classList.add('fade-out');
+          setTimeout(function() {
+            window.location.href = 'main.html';
+          }, 1000); // Wait for the fade-out effect to complete
+        }, 1000); // Wait for half a second after stopping the animation
+      }, 2000); // 2000 milliseconds = 2 seconds
     </script>
   </body>
-  <footer class="footer">
-    <p>&copy; Aditya Sharma, 2024</p>
-  </footer>
 </html>
