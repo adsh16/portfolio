@@ -12,7 +12,7 @@ image.addEventListener("mousemove", event => {
   const offsetX = (clientX - middleX) / (width / 2);
   const offsetY = (middleY - clientY) / (height / 2);
 
-  event.target.style.transform = `perspective(1000px) rotateY(${offsetX * 10}deg) rotateX(${offsetY * 10}deg) scale3d(1, 1, 1)`;
+  event.target.style.transform = `perspective(1000px) rotateY(${offsetX * 15}deg) rotateX(${offsetY * 15}deg) scale3d(1, 1, 1)`;
 });
 
 image.addEventListener("mouseleave", event => {

@@ -8,3 +8,10 @@
 8. fix footer ✅
 9. added go up button ✅
 10. Fix contact me page ✅
+
+
+11. fix fonts
+12. make responsive
+13. add glowing boundary
+https://codepen.io/liyrofx/pen/poVZeEG
+14. Added new cursor ✅
