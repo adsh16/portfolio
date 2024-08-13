@@ -35,10 +35,11 @@ a {
   --dark: #222831;
   --grey: #393E46;
   --blue: #234fbb;
-  --lightblue: #00ADB5;
+  --lightblue: #00d8ff;
   --white: #EEEEEE;
   --red : rgb(185, 46, 52);
   --orange : #ffa500;
+  --background-grey: #282c34;
 }
 /* --------------------------------------- */
 
@@ -238,7 +239,7 @@ p{
 #skills li{
   color: var(--dark);
   font-family:'Inter';
-  font-weight: 500;
+  font-weight:500;
 }
 
 
@@ -278,7 +279,7 @@ p{
 
  .project-details-bold{
   font-weight: bolder;
-  color: #000;
+  color: #fff;
 }
 
 
@@ -300,17 +301,6 @@ p{
 /* project photo css */
 /* --------------------------------------------- */
 
-.project-tile {
-  overflow: visible;
-  box-shadow: 10px 20px 30px -14px #0e1e48;
-  transition: transform 3s ease;
-  transform: scale(1);  /* explicitly set initial state */
-}
-
-.project-tile:hover {
-  transform: scale(1.015);
-  transition: transform 0.3s ease;  /* restate transition here */
-}
 /* Existing styles */
 .project-photo {
   margin: 0;
@@ -375,16 +365,25 @@ p{
 /* project photo css */
 /* --------------------------------------------- */
 
+
+
+.project-tile:hover {
+  transform: scale(1.015);
+  transition: transform 0.3s ease;  /* restate transition here */
+}
+
 .project-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 400px; /* Adjust the max-width as needed */
   margin: 10px;
-  border: 5px solid var(--dark); 
+  box-shadow: 10px 20px 30px -14px #0e1e48;
+  border: 5px solid var(--lightblue); 
   border-radius: 4px;
   padding: 10px;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  background-color: #1d1f27;
   }
   
 .project-tile:hover {
@@ -400,9 +399,12 @@ p{
   font-family: 'Inter';
   font-size: 2rem;
   font-weight: 700;
+  color: #00d8ff;
 }
+
 .project-details p{
   font-size: 1.3rem;
+  color: #b0b3c1;
 }
 
 .github-link{
@@ -447,12 +449,14 @@ img {
 }
 
 .github-link a {
-  color: var(--dark);
-  transition: color 0.5s ease;
+  color: var(--white);
+  transition: color 0.5s ease, transform 0.5s ease;
+  display: inline-block;  /* This allows transform to work on inline elements */
 }
 
 .github-link a:hover {
-  color: var(--blue);
+  transform: scale(1.1);
+  color: var(--lightblue);
 }
 
 /* ----------------------------------------------------------------------------------------------- */
@@ -501,14 +505,67 @@ img {
 
 
 /* ----------------------------------------------------------------------------------------------- */
-/* testing Styling */
+/* misc styling */
 /* ----------------------------------------------------------------------------------------------- */
 
 
 
+#achievements .section-description ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#achievements .section-description li {
+  background-color: #1d1f27;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for all hover effects */
+}
+
+#achievements .section-description li:hover {
+  transform: scale(1.05) rotate(1deg); 
+  border: 5px solid var(--blue); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+  background-color: #282c34;
+}
+
+#achievements .section-description li div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+#achievements .section-description img {
+  width: 120px;
+  height: 120px;
+  grid-row: span 2; /* Makes the image span two rows */
+  /* mix-blend-mode: multiply; */
+}
+
+#achievements .section-description h2 {
+  color: #00d8ff;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+#achievements .section-description p {
+  color: #b0b3c1;
+  margin: 0;
+}
+
+
+
+
 
 /* ----------------------------------------------------------------------------------------------- */
-/* testing Styling */
+/* misc styling */
 /* ----------------------------------------------------------------------------------------------- */
 
 
