@@ -450,13 +450,13 @@ img {
 
 .github-link a {
   color: var(--white);
-  transition: color 0.5s ease, transform 0.5s ease;
+  transition: transform 0.3s;
   display: inline-block;  /* This allows transform to work on inline elements */
 }
 
 .github-link a:hover {
   transform: scale(1.1);
-  color: var(--lightblue);
+  /* color: var(--lightblue); */
 }
 
 /* ----------------------------------------------------------------------------------------------- */
